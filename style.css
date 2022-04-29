@@ -18,12 +18,18 @@ section{
 .max{
     background: #98c1d9;
 }
-.max h1{
-    font-size: 60px;
+.max h1{/*view port units*/
+   /* font-size: 60px;*/
+     font-size: 5vw;     /*view port unit (with) 5% da tela / 1000px 5% deste 1000px*/
+     font-size: max(60px,5vw);/*max: pega a maior valor entre os dois*/
+     /*5vw vai pra tela grande e 60px para tela pequena*/
+
 }
 .min{
     background: #ee6c4d;
 }
 .min h1{
-    font-size: 150px;
+    /*font-size: 150pxpx;*/
+    font-size: min(80px,10vw);/*min: pega a menor valor entre os dois*/
+    /*10vw vai para tela pequena - 80px vai para telas grandes*/
 }
